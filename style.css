@@ -480,6 +480,25 @@ footer {
         display: inline-block;
     }
 
+    /* Mobile Menu Overlay */
+    .menu-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 999;
+        /* Just below Nav (1000) */
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(2px);
+    }
+
+    /* Show overlay when menu is checked */
+    #menu-btn:checked~.page-wrapper .menu-overlay {
+        display: block;
+    }
+
     .hero h1 {
         font-size: 2.2rem;
     }

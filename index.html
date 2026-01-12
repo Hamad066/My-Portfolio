@@ -43,6 +43,9 @@
             <!-- Image is set in CSS -->
         </div>
 
+        <!-- Mobile Menu Overlay -->
+        <label for="menu-btn" class="menu-overlay"></label>
+
         <!-- Navigation -->
         <nav>
             <div class="container">
@@ -335,7 +338,7 @@
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
-                        <span dir="ltr">059 669 6998</span>
+                        <a href="tel:0596696998" dir="ltr">059 669 6998</a>
                     </div>
                     <div class="contact-item">
                         <i class="fab fa-linkedin"></i>
@@ -359,6 +362,15 @@
             </footer>
         </section>
     </div>
+
+    <!-- Script to close mobile menu when a link is clicked -->
+    <script>
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('menu-btn').checked = false;
+            });
+        });
+    </script>
 </body>
 
 </html>
